@@ -84,10 +84,11 @@ E em seguida será criado uma pasta target no seu projeto, caso você abra haver
 
 ![img-intellij-2.png](img%2Fimg-intellij-2.png)
 
-## Passo 06: Abra o AWS Console
+## Passo 06: Criar a função Lambda no AWS Console
 
 Busque o serviço AWS Lambda
-E clique em criar função
+
+E clique em `criar função`
 ![img-aws-lambda-1.png](img%2Fimg-aws-lambda-1.png)
 
 Após clicar no botão, defina as configurações principais como o nome da sua função lambda, a linguagem de execução e a arquitetura
@@ -102,7 +103,7 @@ Nesse exemplo estou usando uma função padrão que a própria aws já configuro
 
 Por fim, basta clicar em criar função
 
-## Configurando a função lambda
+## Passo 07: Configurar a função Lambda
 
 Parabéns! Se você chegou até aqui é porque você criou a sua função :D 
 
@@ -115,8 +116,6 @@ Primeiro vamos upar aquele jar que geramos ao executar o `mvn clean package` lem
 Navegue até a seção de `Origem do código` e clique em fazer upload de: selecione o arquivo .rar
 
 Procure na pasta do projeto, dentro da pasta target o arquivo .jar criado.
-
----
 
 Em seguida navegue até a parte `Configurações de tempo de execução` que está no seu menu do AWS LAMBDA
 
@@ -134,6 +133,8 @@ Em seguida clique em salvar.
 
 Com isso conseguimos mais uma etapa, nossa configuração deu tudo certo (provavelmente).
 
+## Passo 08: Testar a função Lambda
+
 Vamos testar agora, no menu do AWS Lambda busque o Menu `Testar`
 
 ![img-aws-lambda-7.png](img%2Fimg-aws-lambda-7.png)
@@ -145,7 +146,7 @@ Com isso, basta clicar em testar
 E txaram! provavelmente uma mensagem de: "Execução da função: bem-sucedida" irá aparecer
 ![img-aws-lambda-8.png](img%2Fimg-aws-lambda-8.png)
 
-## Criando uma API Gateway para usar nossa função lambda
+## Passo 09: Criar a API Gateway
 
 Busque o serviço de API Gateway e busque a API REST, clique em compilar
 
@@ -157,6 +158,8 @@ Uma aba de configurações irá ser gerada, selecione as opções:
 - E nomeie a sua API com o nome que desejar
 
 Após isso clique em criar API
+
+## Passo 10: Configurar o recurso e o método GET
 
 Na próxima seção teremos as configurações 
 
@@ -184,7 +187,9 @@ Após isso, o seu método GET estará configurado com sucesso
 
 ![img-gateway-8.png](img%2Fimg-gateway-8.png)
 
-Por fim, clique em ações novamente e clique em implantar API para fazermos o Deploy
+## Passo 11: Implantar a API
+
+Nesse passo, clique em ações novamente e clique em implantar API para fazermos o Deploy
 
 ![img-gateway-9.png](img%2Fimg-gateway-9.png)
 
@@ -196,7 +201,13 @@ E agora temos a nossa URL na opção `Invocar URL`
 
 OBS.: Caso você crie uma função para passar parâmetros, talvez seja necessário desmarcar a opção `Ativar controle de utilização`
 
-E txaram!
+## Passo 12: Testar a API
+
+Navegue até a opção "Invocar URL" na sua API Gateway para obter a URL da API. Utilize essa URL para testar sua API no navegador ou utilizando ferramentas como o cURL ou Postman.
+
+Com isso, sua função Lambda está integrada à API Gateway e pronta para ser acessada através da URL da API. 
+
+Parabéns! Você criou e testou uma função Lambda no AWS Lambda e a integrou com uma API Gateway.
 
 ![img-gateway-12.png](img%2Fimg-gateway-12.png)
 
