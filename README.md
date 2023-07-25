@@ -1,4 +1,8 @@
-# Tutorial-Lambda-AWS
+<h1 align="center">
+📄<br>Tutorial Lambda AWS
+</h1>
+
+Este tutorial ensina como criar e testar uma função Lambda no AWS Lambda e como integrá-la com a API Gateway para criar uma API RESTful.
 
 ## Passo 01: Criar Projeto no java
 Primeiramente, você precisará criar um projeto no java (utilize o maven como o gerenciador de pacotes).
