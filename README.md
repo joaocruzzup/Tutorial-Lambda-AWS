@@ -3,7 +3,9 @@
 ## Passo 01: Criar Projeto no java
 Primeiramente, você precisará criar um projeto no java (utilize o maven como o gerenciador de pacotes).
 
-## Passo 02: Insira as dependências que normalmente são utilizadas para rodar o código aws
+## Passo 02: Inserir as dependências necessárias (aws)
+
+Adicione as seguintes dependências no arquivo pom.xml para permitir a execução do código AWS Lambda:
 
 ```
 <dependencies>
@@ -21,9 +23,11 @@ Primeiramente, você precisará criar um projeto no java (utilize o maven como o
     </dependencies>
 ```
 
-OBS.: Lembre-se de dar reload no projeto
+OBS.: Após adicionar as dependências, recarregue o projeto para que elas sejam reconhecidas.
 
-## Passo 03: Dica: Insira um nome amigável ao seu projeto
+## Passo 03: Definir um nome amigável para o projeto (opcional)
+
+No arquivo pom.xml, dentro da seção "build", adicione a tag <finalName> para definir um nome amigável para o seu projeto:
 
 ```
  <build>
@@ -31,7 +35,9 @@ OBS.: Lembre-se de dar reload no projeto
     </build>
 ```
 
-## Passo 04: Crie sua classe no java
+## Passo 04: Criar a classe Java para a função Lambda
+
+Crie uma classe Java que implemente a interface RequestHandler com o código da sua função Lambda. Por exemplo:
 
 ```
 package org.example;
@@ -46,9 +52,13 @@ public class HelloWorld implements RequestHandler<Object, String> {
 }
 ```
 
-Como deverá ficar 
 
-## Passo 05: Abra o terminal do Intellij e rode o comando `mvn clean package`
+## Passo 05: Compilar o projeto
+
+No terminal do IntelliJ, execute o comando mvn clean package para compilar o projeto. Isso criará um arquivo JAR na pasta "target" do seu projeto.
+
+OBS.: Para rodar esse comando é necessário ter o maven instalado na sua máquina, caso não tenha é necessário realizar a instalação. O link a seguir informa um tutorial para isso: [clique nesse link](https://dicasdeprogramacao.com.br/como-instalar-o-maven-no-windows/)
+
 Deve aparecer algo como:
 
 ![img-intellij-1.png](img/img-intellij-1.png)
