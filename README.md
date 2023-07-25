@@ -4,10 +4,10 @@
 
 Este tutorial ensina como criar e testar uma função Lambda no AWS Lambda e como integrá-la com a API Gateway para criar uma API RESTful.
 
-## Passo 01: Criar Projeto no java
+## 🔸 Passo 01: Criar Projeto no java
 Primeiramente, você precisará criar um projeto no java (utilize o maven como o gerenciador de pacotes).
 
-## Passo 02: Inserir as dependências necessárias (aws)
+## 🔸 Passo 02: Inserir as dependências necessárias (aws)
 
 Adicione as seguintes dependências no arquivo pom.xml para permitir a execução do código AWS Lambda:
 
@@ -29,7 +29,7 @@ Adicione as seguintes dependências no arquivo pom.xml para permitir a execuçã
 
 OBS.: Após adicionar as dependências, recarregue o projeto para que elas sejam reconhecidas.
 
-## Passo 03: Definir um nome amigável para o projeto (opcional)
+## 🔸 Passo 03: Definir um nome amigável para o projeto (opcional)
 
 No arquivo pom.xml, dentro da seção "build", adicione a tag <finalName> para definir um nome amigável para o seu projeto:
 
@@ -39,7 +39,7 @@ No arquivo pom.xml, dentro da seção "build", adicione a tag <finalName> para d
     </build>
 ```
 
-## Passo 04: Criar a classe Java para a função Lambda
+## 🔸 Passo 04: Criar a classe Java para a função Lambda
 
 Crie uma classe Java que implemente a interface RequestHandler com o código da sua função Lambda. Por exemplo:
 
@@ -57,7 +57,7 @@ public class HelloWorld implements RequestHandler<Object, String> {
 ```
 
 
-## Passo 05: Compilar o projeto
+## 🔸 Passo 05: Compilar o projeto
 
 No terminal do IntelliJ, execute o comando `mvn clean package` para compilar o projeto. Isso criará um arquivo JAR na pasta "target" do seu projeto.
 
@@ -88,7 +88,7 @@ E em seguida será criado uma pasta target no seu projeto, caso você abra haver
 
 ![img-intellij-2.png](img%2Fimg-intellij-2.png)
 
-## Passo 06: Criar a função Lambda no AWS Console
+## 🔹 Passo 06: Criar a função Lambda no AWS Console
 
 Busque o serviço AWS Lambda
 
@@ -107,7 +107,7 @@ Nesse exemplo estou usando uma função padrão que a própria aws já configuro
 
 Por fim, basta clicar em criar função
 
-## Passo 07: Configurar a função Lambda
+## 🔹 Passo 07: Configurar a função Lambda
 
 Parabéns! Se você chegou até aqui é porque você criou a sua função :D 
 
@@ -137,7 +137,7 @@ Em seguida clique em salvar.
 
 Com isso conseguimos mais uma etapa, nossa configuração deu tudo certo (provavelmente).
 
-## Passo 08: Testar a função Lambda
+## 🔹 Passo 08: Testar a função Lambda
 
 Vamos testar agora, no menu do AWS Lambda busque o Menu `Testar`
 
@@ -150,7 +150,7 @@ Com isso, basta clicar em testar
 E txaram! provavelmente uma mensagem de: "Execução da função: bem-sucedida" irá aparecer
 ![img-aws-lambda-8.png](img%2Fimg-aws-lambda-8.png)
 
-## Passo 09: Criar a API Gateway
+## ▫️ Passo 09: Criar a API Gateway
 
 Busque o serviço de API Gateway e busque a API REST, clique em compilar
 
@@ -163,7 +163,7 @@ Uma aba de configurações irá ser gerada, selecione as opções:
 
 Após isso clique em criar API
 
-## Passo 10: Configurar o recurso e o método GET
+## ▫️ Passo 10: Configurar o recurso e o método GET
 
 Na próxima seção teremos as configurações 
 
@@ -191,7 +191,7 @@ Após isso, o seu método GET estará configurado com sucesso
 
 ![img-gateway-8.png](img%2Fimg-gateway-8.png)
 
-## Passo 11: Implantar a API
+## ▫️ Passo 11: Implantar a API
 
 Nesse passo, clique em ações novamente e clique em implantar API para fazermos o Deploy
 
@@ -205,7 +205,7 @@ E agora temos a nossa URL na opção `Invocar URL`
 
 OBS.: Caso você crie uma função para passar parâmetros, talvez seja necessário desmarcar a opção `Ativar controle de utilização`
 
-## Passo 12: Testar a API
+## ▫ Passo 12: Testar a API
 
 Navegue até a opção "Invocar URL" na sua API Gateway para obter a URL da API. Utilize essa URL para testar sua API no navegador ou utilizando ferramentas como o cURL ou Postman.
 
@@ -216,3 +216,10 @@ Parabéns! Você criou e testou uma função Lambda no AWS Lambda e a integrou c
 ![img-gateway-12.png](img%2Fimg-gateway-12.png)
 
 
+## 👨‍💻 Autor
+
+Nome: João Cruz<br>Linkedin: https://www.linkedin.com/in/joaosilvacruz/
+
+---
+
+<h4 align=center>Made with 💚 by <a href="https://github.com/joaocruzzup">João Cruz</a></h4>
