@@ -55,12 +55,29 @@ public class HelloWorld implements RequestHandler<Object, String> {
 
 ## Passo 05: Compilar o projeto
 
-No terminal do IntelliJ, execute o comando mvn clean package para compilar o projeto. Isso criará um arquivo JAR na pasta "target" do seu projeto.
+No terminal do IntelliJ, execute o comando `mvn clean package` para compilar o projeto. Isso criará um arquivo JAR na pasta "target" do seu projeto.
 
-OBS.: Para rodar esse comando é necessário ter o maven instalado na sua máquina, caso não tenha é necessário realizar a instalação. O link a seguir informa um tutorial para isso: [clique nesse link](https://dicasdeprogramacao.com.br/como-instalar-o-maven-no-windows/)
+OBS.: Para rodar esse comando é necessário ter o maven instalado na sua máquina, caso não tenha você pode seguir o seguinte passo a passo:
 
-Deve aparecer algo como:
+Na barra do intellij clique nas abas nessa sequência:
+1. view
+2. tool windows
+3. maven
 
+![img-intellij-3.png](img%2Fimg-intellij-3.png)
+
+Após isso abrirá uma aba do maven, clique em:
+4. Nome do seu pacote
+5. lifecycle
+6. package
+7. Clique em RUN
+
+![img-intellij-4.png](img%2Fimg-intellij-4.png)
+
+
+Após ter usado o comando `mvn clean package` OU ter seguido os passos acimas
+
+Deve aparecer no console a compilação do projeto:
 ![img-intellij-1.png](img/img-intellij-1.png)
 
 E em seguida será criado uma pasta target no seu projeto, caso você abra haverá um arquivo jar com o nome que foi dado no build
